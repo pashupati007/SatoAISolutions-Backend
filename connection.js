@@ -1,9 +1,9 @@
 const mysql = require("mysql2");
 var mysqlConnection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "!Apex.oracal01",
-  database: "employeedb",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 mysqlConnection.connect((err) => {

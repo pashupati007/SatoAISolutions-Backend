@@ -4,12 +4,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-const saltRounds = 10;
-
-async function hashPassword(password) {
-  const hashedPassword = await bcrypt.hash(password, saltRounds);
-  return hashedPassword;
-}
 
 app.use(cors());
 app.use(bodyParser.json());
